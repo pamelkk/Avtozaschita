@@ -4,160 +4,235 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>HTML Academy: Moon</title>
+  <title>Avtozaschita</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap">
   <link href="normalize.css" rel="stylesheet" />
   <link href="css/min.css" rel="stylesheet" />
-  <link rel="preload" href="fonts/OpenSans-Regular.woff" as="font">
+  <link rel="preload" href="fonts/RobotoCondensed-Regular.woff" as="font">
 </head>
 
 <body class="page-body">
   <header class="page-header">
-    <div class="page-header__wrapper">
-      <a href="#" title="Логотип нашей компании">
-        <svg class="page-header__logo-svg" width="68" height="21">
-          <use xlink:href="img/sprite.svg#icon-logo"></use>
-        </svg></a>
-      <button class="page-header__menu page-header__menu--opened page-header__menu--disabled"
-        title="Открыть/Закрыть меню"></button>
-    </div>
-    <div class="page-header__nav-wrapper">
-      <nav class="page-header__nav">
-        <ul>
-          <li class="page-header__nav-item"><a class="page-header__nav-link" href="#about-us">О нас</a></li>
-          <li class="page-header__nav-item"><a class="page-header__nav-link" href="#about-bikes">Виды велосипедов</a>
-          </li>
-          <li class="page-header__nav-item"><a class="page-header__nav-link" href="#video">Видео про велосипеды</a>
-          </li>
-          <li class="page-header__nav-item"><a class="page-header__nav-link" href="#contacts">Контакты</a></li>
-        </ul>
-      </nav>
-    </div>
+    <a href="#" title="Логотип нашей компании">
+      <svg class="page-header__logo" width="179" height="64">
+        <use xlink:href="img/sprite.svg#icon-logo-header"></use>
+      </svg></a>
+    <nav class="page-header__nav">
+      <ul>
+        <li class="page-header__nav-item"><a class="page-header__nav-link" href="#">Ваша выгода</a></li>
+        <li class="page-header__nav-item"><a class="page-header__nav-link" href="#">Документы</a>
+        </li>
+        <li class="page-header__nav-item"><a class="page-header__nav-link" href="#">Наши выплаты</a>
+        </li>
+        <li class="page-header__nav-item"><a class="page-header__nav-link" href="#">Условия выкупа</a></li>
+        <li class="page-header__nav-item"><a class="page-header__nav-link" href="#">Онлайн-оценка</a></li>
+      </ul>
+    </nav>
+    <a class="page-header__contacts" href="tel:89189571336">+7 (918) 957-13-36</a>
   </header>
   <main class="page-main">
-    <div class="page-main__top-wrapper">
-      <section class="page-main__top">
-        <a href="#" title="Логотип нашей компании">
-          <svg width="68" height="21">
-            <use xlink:href="img/sprite.svg#icon-logo"></use>
-          </svg></a>
-        <h1>Мы продаем велосипеды</h1>
-        <p>Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
-      </section>
-      <section class="page-main__request">
-        <h2>Форма заявки</h2>
-        <form class="page-main__request-form" action="https://echo.htmlacademy.ru" method="post" autocomplete="off">
-          <fieldset class="page-main__request-inputs">
-            <legend>Заполните поля ниже и мы подберем велосипед Вашей мечты</legend>
-            <input type="text" id="name" name="name" placeholder="Введите Ваше Имя" required>
-            <label class="visually-hidden" for="name">Ваше имя</label>
-            <input type="tel" id="tel" name="tel" pattern="[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]"
-              placeholder="Введите Ваш номер телефона" required>
-            <label class="visually-hidden" for="tel">Телефон</label>
+    <section class="page-main__top">
+      <div class="page-main__top-header">
+        <p class="page-main__top-header-place">В Краснодаре и крае</p>
+        <h1>выкуп авто<br> в любом состоянии </h1>
+        <p class="page-main__top-header-tagline">Получите до 90% рыночной цены за авто уже сегодня!</p>
+      </div>
+      <div class="page-main__top-fast-request">
+        <form class="page-main__top-fast-request-form" method="post" autocomplete="off">
+          <fieldset class="page-main__top-fast-request-inputs">
+            <legend>Узнать сумму выкупа авто</legend>
+            <label for="car">Ваш автомобиль</label>
+            <input type="text" id="car" name="car" placeholder="Lada Granta, 2016 г.в.">
+            <label for="tel">Номер телефона</label>
+            <input type="tel" id="tel" name="tel" placeholder="+7 999 999 99 99"
+              pattern="[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]">
           </fieldset>
-          <button class="page-main__request-button" type="submit">Подобрать велосипед мечты</button>
+          <button class="page-main__top-fast-request-button" type="submit">Отправить</button>
         </form>
-      </section>
-    </div>
-    <section class="page-main__facts" id="about-us">
-      <h3>Несколько фактов о нас</h3>
-      <ul>
-        <li class="page-main__facts-item"><span>01</span>
-          <p>Самый широкий выбор велосипедов!</p>
-        </li>
-        <li class="page-main__facts-item"><span>02</span>
-          <p>Доставка велосипедов по всей России!</p>
-        </li>
-        <li class="page-main__facts-item"><span>03</span>
-          <p>Большой выбор крутых аксессуаров!</p>
-        </li>
-        <li class="page-main__facts-item"><span>04</span>
-          <p>Профессиональные консультации!</p>
-        </li>
-      </ul>
+        <p>Отправляя форму, вы соглашаетесь с условиями обработки персональных данных</p>
+      </div>
     </section>
     <section class="page-main__types">
-      <h4 id="about-bikes">Виды велосипедов</h4>
+      <h2>Мы готовы приобрести любые автомобили</h2>
       <ul>
-        <li class="page-main__types-item page-main__types-item--road">
-          <picture>
-            <!-- 1х: 270px; 2x: 540px -->
-            <source media="(max-width: 767px)" srcset="img/road-bike-mobile.webp 1x, img/road-bike-mobile-2x.webp 2x">
-            <!-- 1х: 270px; 2x: 540px -->
-            <source media="(max-width: 1023px)" srcset="img/road-bike-tablet.webp 1x, img/road-bike-tablet-2x.webp 2x">
-            <!-- 1х: 342px; 2x: 684px -->
-            <img src="img/road-bike-desktop.jpg" srcset="img/road-bike-desktop-2x.jpg 2x" width="342" height="503"
-              alt="Дорожный велосипед" /></picture>
-          <a class="page-main__types-link" href="#">
-            <h5>Дорожный велосипед</h5>
-          </a>
+        <li class="page-main__types-item"><img src="img/truck.jpg" srcset="img/truck-2x.jpg 2x" width="399" height="250"
+            alt="Грузовые машины"><span>Грузовые</span></li>
+        <li class="page-main__types-item page-main__types-item--car"><img src="img/car.jpg" srcset="img/car-2x.jpg 2x"
+            width="259" height="154" alt="Легковые машины"><span>Легковые</span></li>
+        <li class="page-main__types-item"><img src="img/special-equipment.jpg" srcset="img/special-equipment-2x.jpg 2x"
+            width="353" height="254" alt="Спецтехнику"><span>Спецтехнику</span></li>
+      </ul>
+    </section>
+    <section class="page-main__features">
+      <h3>Вы ничем не рискуете</h3>
+      <ul>
+        <li class="page-main__features-item page-main__features-item--money"><span>Деньги сразу</span>
+          <p>Полную стоимость авто вы получите сразу после оформления сделки.</p>
         </li>
-        <li class="page-main__types-item page-main__types-item--mountain">
-          <picture>
-            <!-- 1х: 270px; 2x: 540px -->
-            <source media="(max-width: 767px)"
-              srcset="img/mountain-bike-mobile.webp 1x, img/mountain-bike-mobile-2x.webp 2x">
-            <!-- 1х: 270px; 2x: 540px -->
-            <source media="(max-width: 1023px)"
-              srcset="img/mountain-bike-tablet.webp 1x, img/mountain-bike-tablet-2x.webp 2x">
-            <!-- 1х: 342px; 2x: 684px -->
-            <img src="img/mountain-bike-desktop.jpg" srcset="img/mountain-bike-desktop-2x.jpg 2x" width="342"
-              height="566" alt="Горный велосипед" /></picture>
-          <a class="page-main__types-link" href="#">
-            <h5>Горный велосипед</h5>
-          </a>
+        <li class="page-main__features-item page-main__features-item--deal"><span>Сделка застрахована</span>
+          <p>Все документы оформляются согласно текущему законодательству РФ.</p>
         </li>
-        <li class="page-main__types-item page-main__types-item--kids">
-          <picture>
-            <!-- 1х: 270px; 2x: 540px -->
-            <source media="(max-width: 767px)" srcset="img/kids-bike-mobile.webp 1x, img/kids-bike-mobile-2x.webp 2x">
-            <!-- 1х: 270px; 2x: 540px -->
-            <source media="(max-width: 1023px)" srcset="img/kids-bike-tablet.webp 1x, img/kids-bike-tablet-2x.webp 2x">
-            <!-- 1х: 342px; 2x: 684px -->
-            <img src="img/kids-bike-desktop.jpg" srcset="img/kids-bike-desktop-2x.jpg 2x" width="342" height="513"
-              alt="Детский велосипед" /></picture>
-          <a class="page-main__types-link" href="#">
-            <h5>Детский велосипед</h5>
-          </a>
+        <li class="page-main__features-item page-main__features-item--commission"><span>Никаких комиссий</span>
+          <p>Не согласны с ценой авто — просто уезжаетеи ни за что не платите.</p>
+        </li>
+        <li class="page-main__features-item page-main__features-item--time"><span>Быстро, как никогда</span>
+          <p>Процесс продажи авто занимает не более 2 часов.</p>
         </li>
       </ul>
     </section>
-    <section class="page-main__video">
-      <h6 id="video">Видео про велосипеды</h6>
-      <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для
-        себя.</p>
-      <picture>
-        <!-- 1х: 288px; 2x: 576px -->
-        <source media="(max-width: 767px)" srcset="img/video-mobile.webp 1x, img/video-mobile-2x.webp 2x">
-        <!-- 1х: 503px; 2x: 1006px -->
-        <source media="(max-width: 1023px)" srcset="img/video-tablet.webp 1x, img/video-tablet-2x.webp 2x">
-        <!-- 1х: 929px; 2x: 1858px -->
-        <img class="page-main__video-img" src="img/video-desktop.jpg" srcset="img/video-desktop-2x.jpg 2x" width="929"
-          height="522" alt="Видео про велосипеды" /></picture>
-      <a href="#" class="page-main__video-button" title="Включить видео"></a>
+    <section class="page-main__online">
+      <h4>Узнайте стоимость своего авто по WhatsApp</h4>
+      <p>Получите оценку вашего авто по фото. Обговорите детали и удобное место встречи.</p>
+      <a class="page-main__online-link" href="#" title="Оценить авто">Оценить авто</a>
     </section>
-    <section class="page-main__map">
-      <h6>Как нас найти?</h6>
-      <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3997.207512053241!2d30.323046999999995!3d59.938717000000004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1593374394802!5m2!1sru!2sru"
-        width="320" height="250" style="border: 0;" allowfullscreen="" aria-hidden="false" tabindex="0"
-        title="Офис компании по адресу: ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
-      <picture>
-        <!-- 1х: 319px; 2x: 638px -->
-        <source media="(max-width: 767px)" srcset="img/map-mobile.webp 1x, img/map-mobile-2x.webp 2x">
-        <!-- 1х: 698px; 2x: 1396px -->
-        <source media="(max-width: 1023px)" srcset="img/map-tablet.webp 1x, img/map-tablet-2x.webp 2x">
-        <!-- 1х: 957px; 2x: 1914px -->
-        <img class="page-main__map-img" src="img/map-desktop.jpg" srcset="img/map-desktop-2x.jpg 2x" width="957"
-          height="530" alt="Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19" /></picture>
+    <section class="page-main__documents">
+      <h5>Подготовьте необходимые документы</h5>
+      <ul>
+        <li class="page-main__documents-item">Паспорт транспортного средства</li>
+        <li class="page-main__documents-item">Свидетельство о регистрации машины</li>
+        <li class="page-main__documents-item">Паспорт собственика автомобиля</li>
+        <li class="page-main__documents-item page-main__documents-item--attorney"><span>Генеральная доверенность.
+          </span>Если автомобиль находится не в
+          вашей собственности необходима доверенность от владельца.</li>
+      </ul>
+      <p>Просто соберите документы - все остальные вопросы мы берем на себя!</p>
+    </section>
+    <section class="page-main__orders">
+      <h6>Избавили от проблем более 300 автовладельцев</h6>
+      <ul>
+        <li class="page-main__orders-item">
+          <img src="img/announcement-cruze.jpg" srcset="img/announcement-cruze-2x.jpg 2x" width="340" height="235"
+            alt="Chevrolet Cruze" />
+          <span>Chevrolet Cruze</span>
+          <p>1,8 МТ 2014 г.в</p>
+          <dl>
+            <div class="page-main__orders-item-line">
+              <dt class="page-main__orders-item-parameter">Рыночная стоимость</dt>
+              <dd class="page-main__orders-item-value">500 000 руб.</dd>
+            </div>
+            <div class="page-main__orders-item-line">
+              <dt class="page-main__orders-item-parameter">Стоимость выкупа</dt>
+              <dd class="page-main__orders-item-value page-main__orders-item-value--ransom">550 000 <span>руб.</span>
+              </dd>
+            </div>
+          </dl>
+        </li>
+        <li class="page-main__orders-item">
+          <img src="img/announcement-solaris.jpg" srcset="img/announcement-solaris-2x.jpg 2x" width="340" height="235"
+            alt="Hyundai Solaris" />
+          <span>Hyundai Solaris</span>
+          <p>2 МТ 2011 г.в</p>
+          <dl>
+            <div class="page-main__orders-item-line">
+              <dt class="page-main__orders-item-parameter">Рыночная стоимость</dt>
+              <dd class="page-main__orders-item-value">280 000 руб.</dd>
+            </div>
+            <div class="page-main__orders-item-line">
+              <dt class="page-main__orders-item-parameter">Стоимость выкупа</dt>
+              <dd class="page-main__orders-item-value page-main__orders-item-value--ransom">350 000 <span>руб.</span>
+              </dd>
+            </div>
+          </dl>
+        </li>
+        <li class="page-main__orders-item  page-main__orders-item--rover">
+          <img src="img/announcement-rover.jpg" srcset="img/announcement-rover-2x.jpg 2x" width="340" height="235"
+            alt="Range Rover" />
+          <span>Range Rover</span>
+          <p>2 МТ 2013 г.в</p>
+          <dl>
+            <div class="page-main__orders-item-line">
+              <dt class="page-main__orders-item-parameter">Рыночная стоимость</dt>
+              <dd class="page-main__orders-item-value">1 200 000 руб.</dd>
+            </div>
+            <div class="page-main__orders-item-line">
+              <dt class="page-main__orders-item-parameter">Стоимость выкупа</dt>
+              <dd class="page-main__orders-item-value page-main__orders-item-value--ransom">1 600 000 <span>руб.</span>
+              </dd>
+            </div>
+          </dl>
+        </li>
+      </ul>
+    </section>
+    <section class="page-main__procedure">
+      <h6>Продайте свой авто - быстро, просто, выгодно!</h6>
+      <ul>
+        <li class="page-main__procedure-item">
+          <svg width="15" height="43">
+            <use xlink:href="img/sprite.svg#icon-number-1"></use>
+          </svg>
+          <span>Свяжитесь с нами</span>
+          <p>Позвоните, оставьте заявку или отправьте фото в WhatsApp.</p>
+        </li>
+        <li class="page-main__procedure-item">
+          <svg width="28" height="43">
+            <use xlink:href="img/sprite.svg#icon-number-2"></use>
+          </svg>
+          <span>Встретьте оценщика</span>
+          <p>Договоритесь на удобное время и покажите свой автомобиль.</p>
+        </li>
+        <li class="page-main__procedure-item">
+          <svg width="27" height="44">
+            <use xlink:href="img/sprite.svg#icon-number-3"></use>
+          </svg>
+          <span>Заключите договор</span>
+          <p>Составляем договор купли-продажи все честно и официально!</p>
+        </li>
+        <li class="page-main__procedure-item">
+          <svg width="30" height="43">
+            <use xlink:href="img/sprite.svg#icon-number-4"></use>
+          </svg>
+          <span>Получите деньги сразу</span>
+          <p>Выплачиваем всю сумму на месте.</p>
+        </li>
+      </ul>
+    </section>
+    <section class="page-main__full-request">
+      <h6>Узнайте сумму выкупа своего автомобиля</h6>
+      <form class="page-main__full-request-form" method="post" autocomplete="off">
+        <fieldset class="page-main__full-request-inputs">
+          <legend>Заполните данные об авто, прикрепите фото и мы сообщим вам стоимость</legend>
+          <div class="page-main__full-request-inputs-wrapper">
+            <label for="your-car">Ваш автомобиль</label>
+            <input type="text" id="your-car" name="car" placeholder="Lada Granta">
+          </div>
+          <div class="page-main__full-request-inputs-wrapper">
+            <label for="year">Год выпуска</label>
+            <input type="text" id="year" name="year" placeholder="2016 г.в.">
+          </div>
+          <div class="page-main__full-request-inputs-wrapper">
+            <label for="name">Ваше имя</label>
+            <input type="text" id="name" name="name" placeholder="Евгений">
+          </div>
+          <div class="page-main__full-request-inputs-wrapper">
+            <label for="your-tel">Номер телефона</label>
+            <input type="tel" id="your-tel" name="tel" placeholder="+7 999 999 99 99"
+              pattern="[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]">
+          </div>
+          <input type="file" id="photo" name="photo" accept="image/png, image/jpeg" class="visually-hidden">
+          <label class="page-main__full-request-inputs--photo" for="photo">Добавьте фото</label>
+        </fieldset>
+        <button class="page-main__full-request-button" type="submit">Отправить</button>
+      </form>
+      <p>Отправляя форму, вы соглашаетесь с условиями обработки персональных данных</p>
     </section>
   </main>
-  <footer class="page-footer" id="contacts">
-    <h6>Наши контакты</h6>
-    <a class="page-footer__contacts-link page-footer__contacts-link--mail"
-      href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
-    <a class="page-footer__contacts-link page-footer__contacts-link--phone" href="tel:849978468446">+7 (499)
-      -784-684-46</a>
+  <footer class="page-footer">
+    <div class="page-footer__company">
+      <a class="page-footer__company-politics" href="#">Политика конфиденциальности</a>
+      <p>Copyright © 2019</p>
+      <a href="https://art6.ru/" title="Логотип компании Art6">
+        <svg width="57" height="22">
+          <use xlink:href="img/sprite.svg#icon-company"></use>
+        </svg></a>
+    </div>
+    <a class="page-footer__logo" href="#" title="Логотип нашей компании">
+      <svg width="105" height="90">
+        <use xlink:href="img/sprite.svg#icon-logo-footer"></use>
+      </svg></a>
+    <div class="page-footer__contacts">
+      <a class="page-footer__contacts-link" href="tel:89189571336">+7 (918) 957-13-36</a>
+      <a class="page-footer__contacts-link" href="mailto:avto.vucup23mail.ru">avto.vucup23mail.ru</a>
+    </div>
   </footer>
   <script src="js/main.js"></script>
 </body>

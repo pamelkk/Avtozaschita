@@ -1,7 +1,7 @@
 {
-  "name": "Moon",
+  "name": "Avtozaschita",
   "private": true,
-  "description": "Личный проект «Moon» от HTML Academy",
+  "description": "Тестовое задание Avtozaschita",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
     "autoprefixer": "^9.8.4",
