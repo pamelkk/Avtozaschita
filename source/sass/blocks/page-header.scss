@@ -1,13 +1,11 @@
 .page-header {
   display: flex;
   flex-wrap: wrap;
-  width: 1422px;
-  justify-content: space-between;
+  justify-content: space-around;
   min-height: 85px;
   box-sizing: border-box;
   padding-top: 12px;
   padding-bottom: 9px;
-  align-self: center;
 }
 
 .page-header__nav {
@@ -67,7 +65,7 @@
     height: 17px;
     top: 19px;
     left: -30px;
-    background-image: url("../../img/icon-phone.svg");
+    background-image: url("../img/icon-phone.svg");
   }
 
   &:hover {
@@ -79,4 +77,23 @@
 .page-header a {
   height: 64px;
   align-self: center;
+}
+
+@media (max-width: $tablet-width) {
+  .page-header__contacts {
+    font-size: 18px;
+    padding-left: 25px;
+    line-height: 25px;
+
+    &::before {
+      left: 4px;
+      top: 21px;
+    }
+  }
+
+  .page-header__logo {
+    width: 140px;
+    height: 50px;
+    margin-top: 7px;
+  }
 }

@@ -1,12 +1,12 @@
 .page-footer {
-  align-self: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 1422px;
   box-sizing: border-box;
   min-height: 125px;
   margin-top: 44px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .page-footer__logo {
@@ -34,9 +34,17 @@
   font-size: 12px;
   line-height: 14px;
   font-family: $font-text;
-  color: $footer-politics;
+  color: $copyright;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.page-footer__company a {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 14px;
+  font-family: $font-text;
+  color: $copyright;
 }
 
 .page-footer__contacts {
